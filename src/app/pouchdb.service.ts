@@ -1,6 +1,6 @@
 import { Injectable, EventEmitter } from '@angular/core';
-// const PouchDB = require('pouchdb');
-import PouchDB from 'pouchdb';
+const PouchDB = require('pouchdb-browser');
+const db = new PouchDB('my_test_db');
 
 @Injectable()
 export class PouchDBService {
@@ -41,7 +41,7 @@ export class PouchDBService {
   }
 
   public sync(remote: string) {
-    let remoteDatabase = new PouchDB(remote);
+    const remoteDatabase = new PouchDB(remote);
     this.database.sync(remoteDatabase, {
       live: true
     }).on('change', change => {

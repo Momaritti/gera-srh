@@ -1,5 +1,6 @@
 import { Component, OnInit, NgZone } from '@angular/core';
 import { PouchDBService } from './pouchdb.service';
+// import PouchDB from 'pouchdb'; // not here
 
 @Component({
   selector: 'app-root',
