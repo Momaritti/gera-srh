@@ -33,3 +33,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 then run
 
 `pouchdb-server --port 3000 --in-memory`
+
+[pouchdb-server](https://github.com/pouchdb/pouchdb-server)
