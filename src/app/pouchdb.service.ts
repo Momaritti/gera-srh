@@ -1,6 +1,6 @@
 import { Injectable, EventEmitter } from '@angular/core';
-const PouchDB = require('pouchdb-browser');
-const db = new PouchDB('my_test_db');
+// import * as PouchDB from 'pouchdb'; // gives pouchdb is not a constructor error
+const PouchDB = require('pouchdb');
 
 @Injectable()
 export class PouchDBService {
@@ -47,7 +47,7 @@ export class PouchDBService {
     }).on('change', change => {
       this.listener.emit(change);
     }).on('error', error => {
-      console.error(JSON.stringify(error));
+      console.error(JSON.stringify(error)); // problem here
     });
   }
 
