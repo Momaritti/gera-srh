@@ -4,7 +4,9 @@ import { Injectable, EventEmitter } from '@angular/core';
 // const PouchDB = require('pouchdb'); // also gives pouchdb
 import PouchDB from 'pouchdb';
 
-new PouchDB();
+// new PouchDB('test');
+let db = new PouchDB('todos');
+let remoteCouch = false;
 
 @Injectable()
 export class PouchDBService {
@@ -15,7 +17,7 @@ export class PouchDBService {
 
   public constructor() {
     if (!this.isInstantiated) {
-      this.database = new PouchDB('dman');
+      this.database = new PouchDB('test');
       this.isInstantiated = true;
     }
   }

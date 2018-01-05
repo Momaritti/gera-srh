@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
   }
 
   public ngOnInit() {
-    this.database.sync('http://localhost:3000');
+    this.database.sync('http://localhost:3000/_all_dbs');
     this.database.getChangeListener().subscribe(data => {
       for (let i = 0; i < data.change.docs.length; i++) {
         this.zone.run(() => {
