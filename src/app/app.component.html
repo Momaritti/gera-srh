@@ -19,10 +19,11 @@
     </ul>
   </nav>
 <div>
-  <input type="text" placeholder="Username" [(ngModel)]="form.username" />
-  <input type="text" placeholder="First Name" [(ngModel)]="form.firstname" />
-  <input type="text" placeholder="Last Name" [(ngModel)]="form.lastname" />
-  <button (click)="insert()">Add</button>
+  <input id="user_in" type="text" placeholder="Benutzername" [(ngModel)]="form.username" />
+  <input id="password_in" type="password" placeholder="Passwort" [(ngModel)]="form.firstname" />
+  <!--input type="text" placeholder="Last Name" [(ngModel)]="form.lastname" />
+  -->
+    <button (click)="insert()">Add</button>
   <br />
   <table class="table table-striped">
     <thead>
@@ -43,3 +44,4 @@
 <app-hear></app-hear>
 <app-watch></app-watch>
 <app-read></app-read>
+

@@ -1,5 +1,6 @@
 import { Component, OnInit, NgZone } from '@angular/core';
 import { PouchDBService } from './pouchdb.service';
+let UserSys = require('app/user-system.js');
 // import { PouchDb } from 'pouchdb'; // not here
 
 @Component({
