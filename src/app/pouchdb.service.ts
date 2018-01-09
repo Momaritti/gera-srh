@@ -1,8 +1,5 @@
 import { Injectable, EventEmitter } from '@angular/core';
-// import * as PouchDB from 'pouchdb'; // gives pouchdb is not a constructor error
-// import PouchDB from 'pouchdb';
-// const PouchDB = require('pouchdb'); // also gives pouchdb
-import PouchDB from 'pouchdb';
+import PouchDB from 'pouchdb'; // seems to be the right way to import
 
 // new PouchDB('test');
 let db = new PouchDB('todos');
