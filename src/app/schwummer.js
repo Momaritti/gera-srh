@@ -1,4 +1,4 @@
-export function schwummer () {
+export function schwummer() {
   var colors = new Array(
     [62, 35, 255],
     [60, 255, 60],
@@ -62,3 +62,6 @@ export function schwummer () {
 // }
    console.log('schwummer.js is executed')
 }
+
+// export { schwummer };
+

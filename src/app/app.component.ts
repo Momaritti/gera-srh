@@ -2,6 +2,9 @@ import { Component, OnInit, NgZone } from '@angular/core';
 import { PouchDBService } from './pouchdb.service';
 // import { PouchDb } from 'pouchdb'; // not here
 
+import { schwummer } from './schwummer.js';
+schwummer();
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

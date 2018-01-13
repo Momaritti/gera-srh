@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 // import { schwummer } from './schwummer.js';
-//console.log(schwummer);
+// console.log(schwummer);
 // schwummer();
+// import { test } from 'test';
+// console.log(test());
 
 @Component({
   selector: 'app-schwummer',

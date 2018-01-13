@@ -24,7 +24,8 @@ import { SchwummerComponent } from './schwummer/schwummer.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    schwummer
   ],
   providers: [PouchDBService],
   bootstrap: [AppComponent]
