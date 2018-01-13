@@ -10,6 +10,7 @@ import { PouchDBService } from './pouchdb.service';
 import { HearComponent } from './hear/hear.component';
 import { WatchComponent } from './watch/watch.component';
 import { ReadComponent } from './read/read.component';
+import { SchwummerComponent } from './schwummer/schwummer.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ReadComponent } from './read/read.component';
     AppComponent,
     HearComponent,
     WatchComponent,
-    ReadComponent
+    ReadComponent,
+    SchwummerComponent
   ],
   imports: [
     BrowserModule,
