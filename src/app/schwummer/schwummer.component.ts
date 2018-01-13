@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-// let schwummer = require('./schwummer.js');
-// schwummer;
-
-import * as schwummer from 'schwummer';
+// import { schwummer } from './schwummer.js';
+//console.log(schwummer);
+// schwummer();
 
 @Component({
   selector: 'app-schwummer',
