@@ -1,26 +1,54 @@
 import { Component, OnInit, NgZone } from '@angular/core';
-import { PouchDBService } from './pouchdb.service';
+// import { PouchDBService } from './pouchdb.service';
 // import { PouchDb } from 'pouchdb'; // not here
+// import { DataService } from './data.service'; // TODO
+import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+  template: `
+    <p [@myAwesomeAnimation]='state' (click)="animateMe()">I will grow</p>
+  `,
+  styles: [`
+    p { color: black; width: 200px; background: lightblue; margin: 100px auto; text-align: center; padding: 20px; font-size: 1.5rem;}
+  `],
+  // templateUrl: './app.component.html',
+  // styleUrls: ['./app.component.sass'],
+  animations: [
+    trigger('myAwesomeAnimation', [
+      state('small', style({
+        transform: 'scale(1)',
+      })),
+      state('large', style({
+        transform: 'scale(1.2)',
+      })),
+      transition('small <=> large', animate('300ms ease-in')),
+    ]),
+  ]
 })
-export class AppComponent implements OnInit {
 
-  public people: Array<any>;
-  public form: any;
+export class AppComponent {
+  state: string = 'small';
+  // public people: Array<any>;
+  // public form: any;
+  constructor() {
 
-  public constructor(private database: PouchDBService, private zone: NgZone) {
+  }
+
+  animateMe() {
+    this.state = (this.state === 'small' ? 'large' : 'small');
+  }
+}
+  /*public constructor(private database: PouchDBService, private zone: NgZone) {
     this.people = [];
     this.form = {
       'username': '',
       'firstname': '',
       'lastname': ''
     };
-  }
+  }*/
 
+  /*
   public ngOnInit() {
     this.database.sync('http://localhost:3333/db');
     this.database.getChangeListener().subscribe(data => {
@@ -50,5 +78,4 @@ export class AppComponent implements OnInit {
       };
     }
   }
-
-}
+*/

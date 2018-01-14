@@ -5,26 +5,29 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
-import { PouchDBService } from './pouchdb.service';
+// import { PouchDBService } from './pouchdb.service';
 
-import { HearComponent } from './hear/hear.component';
-import { WatchComponent } from './watch/watch.component';
-import { ReadComponent } from './read/read.component';
+// import { HearComponent } from './hear/hear.component';
+// import { WatchComponent } from './watch/watch.component';
+// import { ReadComponent } from './read/read.component';
 
+// animations
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HearComponent,
-    WatchComponent,
-    ReadComponent
+    // HearComponent,
+    // WatchComponent,
+    // ReadComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule
   ],
-  providers: [PouchDBService],
+  // providers: [PouchDBService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
