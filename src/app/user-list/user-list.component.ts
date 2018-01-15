@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-list.component.sass']
 })
 export class UserListComponent implements OnInit {
-
+  users = [
+    { name: 'Henry'},
+    { name: 'Anna'},
+    { name: 'Admin'}
+  ];
   constructor() { }
 
   ngOnInit() {
