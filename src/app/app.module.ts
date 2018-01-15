@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
-import { PouchDBService } from './pouchdb.service';
+// import { PouchDBService } from './pouchdb.service';
 
 import { HearComponent } from './hear/hear.component';
 import { WatchComponent } from './watch/watch.component';
@@ -24,7 +24,9 @@ import { ReadComponent } from './read/read.component';
     FormsModule,
     HttpModule
   ],
-  providers: [PouchDBService],
+  providers: [
+    // PouchDBService
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
