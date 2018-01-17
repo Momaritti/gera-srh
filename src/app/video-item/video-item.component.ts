@@ -17,6 +17,7 @@ export class VideoItemComponent implements OnInit {
       this.title = params['title'];
       this.path = params['path'];
     });
+    this.path = '../../assets/bird.mp4'; // hardcoded for now
   }
 
 }
