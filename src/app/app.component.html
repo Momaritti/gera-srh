@@ -6,8 +6,9 @@
   <li><a routerLink="/user/list">Users Liste</a></li>
 </ul>
 
-
-<router-outlet></router-outlet>
+<div id="page" class="routeContainer" [@routeAnimation]="getDepth(myOutlet)">
+  <router-outlet #myOutlet="outlet"></router-outlet>
+</div>
 
 <!-- moved to home component
 <div class="first-view">
