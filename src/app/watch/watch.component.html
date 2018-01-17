@@ -1,6 +1,11 @@
 <div class="container">
   <div class="watch-view">
-    <h2>Videos</h2>
+    <h1>Videos</h1>
+    <ul>
+      <li *ngFor="let video of videos" [routerLink]="['item', video.title]">
+        <h2>{{video.title}}</h2>
+      </li>
+    </ul>
+    <router-outlet></router-outlet>
   </div>
 </div>
-
