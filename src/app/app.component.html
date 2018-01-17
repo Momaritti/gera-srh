@@ -1,4 +1,16 @@
-<!--The content below is only a placeholder and can be replaced.-->
+
+<!-- router navigation -->
+<ul>
+  <li><a routerLink="/home">Home</a></li>
+  <li><a routerLink="/watch">Watch</a></li>
+  <li><a routerLink="/user/list">Users Liste</a></li>
+</ul>
+
+<div id="page" class="routeContainer" [@routeAnimation]="getDepth(myOutlet)">
+  <router-outlet #myOutlet="outlet"></router-outlet>
+</div>
+
+<!-- moved to home component
 <div class="first-view">
   <h1>
     Hallo {{ user }}
@@ -22,3 +34,4 @@
 <app-hear></app-hear>
 <app-watch></app-watch>
 <app-read></app-read>
+-->
