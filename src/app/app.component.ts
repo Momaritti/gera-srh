@@ -45,6 +45,24 @@ import { trigger, transition, group, query, style, animate } from '@angular/anim
           query(':leave', [animate('0.3s cubic-bezier(.35, 0, .25, 1)', style({ transform: 'translateY(100%'}))]),
           query(':enter', [animate('0.3s cubic-bezier(.35, 0, .25, 1)', style({ transform: 'translateY(0%'}))])
         ])
+      ]),
+      transition('2 => 3', [
+        style({ height: '!'}), // setze höhe auf höhe beim ende der animaiton
+        query(':enter', style( { transform: 'translateY(-100%)'})),
+        query(':enter, :leave', style({position: 'absolute', top: 0, left: 0, right: 0})),
+        group([
+          query(':leave', [animate('0.3s cubic-bezier(.35, 0, .25, 1)', style({ transform: 'translateY(100%'}))]),
+          query(':enter', [animate('0.3s cubic-bezier(.35, 0, .25, 1)', style({ transform: 'translateY(0%'}))])
+        ])
+      ]),
+      transition('3 => 2', [
+        style({ height: '!'}), // setze höhe auf höhe beim ende der animaiton
+        query(':enter', style( { transform: 'translateY(100%)'})),
+        query(':enter, :leave', style({position: 'absolute', top: 0, left: 0, right: 0})),
+        group([
+          query(':leave', [animate('0.3s cubic-bezier(.35, 0, .25, 1)', style({ transform: 'translateY(-100%'}))]),
+          query(':enter', [animate('0.3s cubic-bezier(.35, 0, .25, 1)', style({ transform: 'translateY(0%'}))])
+        ])
       ])
     ])
   ]
