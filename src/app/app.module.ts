@@ -11,14 +11,19 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserComponent } from './user/user.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
+import { VideoItemComponent } from './video-item/video-item.component';
 
 // router configuration = navigation
 // depth ist für die routing animations
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent, data: { title: 'home', depth: 1 }},
-  { path: 'watch', component: WatchComponent, data: { title: 'Videos', depth: 2 }},
+  { path: 'watch', children: [
+      { path: 'video', component: WatchComponent, data: { depth: 2 }, children: [
+          { path: 'item/:title', component: VideoItemComponent }
+        ]}
+    ]},
   { path: 'user', children: [
-      { path: 'list', component: UserListComponent, children: [
+      { path: 'list', component: UserListComponent, data: { depth: 3 }, children: [
           { path: 'detail/:name', component: UserComponent }
         ]}
     ]},
@@ -34,7 +39,8 @@ const appRoutes: Routes = [
     ReadComponent,
     UserListComponent,
     HomeComponent,
-    UserComponent
+    UserComponent,
+    VideoItemComponent
   ],
   imports: [
     BrowserModule,
