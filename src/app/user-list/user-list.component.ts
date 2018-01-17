@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// import { ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-user-list',
@@ -7,12 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserListComponent implements OnInit {
   users = [
-    { name: 'Henry'},
-    { name: 'Anna'},
-    { name: 'Admin'}
+    { name: 'Henry', alter: '22' },
+    { name: 'Anna', alter: '11' },
+    { name: 'Admin', alter: '999' }
   ];
-  constructor() { }
 
+  // constructor(private route: ActivatedRoute) { }
+constructor() { }
   ngOnInit() {
   }
 

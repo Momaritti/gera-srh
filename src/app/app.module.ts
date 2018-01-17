@@ -17,8 +17,8 @@ import { RouterModule, Routes } from '@angular/router';
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent, data: { title: 'home', depth: 1 }},
   { path: 'watch', component: WatchComponent, data: { title: 'Videos', depth: 2 }},
-  { path: 'user', data: { title: 'User Liste', depth: 3 }, children: [
-      { path: 'list', component: UserListComponent, data: { depth: 4 }, children: [
+  { path: 'user', children: [
+      { path: 'list', component: UserListComponent, data: { depth: 3 }, children: [
           { path: 'detail/:name', component: UserComponent, data: { depth: 5 }}
         ]}
     ]},
