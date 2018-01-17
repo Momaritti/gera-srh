@@ -1,6 +1,18 @@
+<!--
 <div class="first-view">
 <h2>Lesen</h2>
 <h3>Zu deiner Krankheit</h3>
 <h3>Verwandte Themen</h3>
 </div>
-
+-->
+<div class="container">
+  <div class="read-view">
+    <h1>Lesen</h1>
+    <ul>
+      <li *ngFor="let doc of docs" [routerLink]="['item', doc.title]">
+        <h2>{{doc.title}}</h2>
+      </li>
+    </ul>
+    <router-outlet></router-outlet>
+  </div>
+</div>

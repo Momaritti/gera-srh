@@ -12,6 +12,7 @@ import { UserComponent } from './user/user.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { VideoItemComponent } from './video-item/video-item.component';
+import { DocItemComponent } from './doc-item/doc-item.component';
 
 // router configuration = navigation
 // depth ist für die routing animations
@@ -20,6 +21,11 @@ const appRoutes: Routes = [
   { path: 'watch', children: [
       { path: 'video', component: WatchComponent, data: { depth: 2 }, children: [
           { path: 'item/:title', component: VideoItemComponent }
+        ]}
+    ]},
+  { path: 'read', children: [
+      { path: 'document', component: ReadComponent, data: { depth: 3 }, children: [
+          { path: 'item/:title', component: DocItemComponent }
         ]}
     ]},
   { path: 'user', children: [
@@ -40,7 +46,8 @@ const appRoutes: Routes = [
     UserListComponent,
     HomeComponent,
     UserComponent,
-    VideoItemComponent
+    VideoItemComponent,
+    DocItemComponent
   ],
   imports: [
     BrowserModule,

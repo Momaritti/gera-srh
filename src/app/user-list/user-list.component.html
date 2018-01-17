@@ -1,6 +1,6 @@
 <div class="container">
   <div class="user-list-view">
-  <h2>User Liste</h2>
+  <h2>Liste aller Benutzer</h2>
   <ul>
     <li *ngFor="let user of users" [routerLink]="['detail', user.name]">{{user.name}}</li>
   </ul>

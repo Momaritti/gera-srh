@@ -60,6 +60,10 @@ h3
   font-size: $h3-size
   color: $font-color
   font-family: $main-font
+h4
+  font-size: $h4-size
+  color: $font-color
+  font-family: $main-font
 p
   font-family: $main-font
   font-size: $main-text
@@ -72,13 +76,21 @@ li
   background-color: $background-color
   border-radius: 100%
   padding: 3rem
-  width: 30vw
-  height: 30vw
-  right: -20vw
-  bottom: -20vw
-  li a
-    text-decoration: none
-    font-size: 1.5rem
-    font-family: $main-font
-    &:hover
-      color: $font-color
+  padding-right: 0
+  width: 50vw
+  height: 50vw
+  right: -30vw
+  bottom: -30vw
+  li
+    // position: absolute
+    display: block
+    margin-right: -10em
+    a
+      text-decoration: none
+      font-size: 1.5rem
+      font-family: $main-font
+      text-align: right
+      margin-bottom: 1em
+      margin-left: 6vw
+      &:hover
+        color: $font-color
