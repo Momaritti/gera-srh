@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { VideoItemComponent } from './video-item/video-item.component';
 import { DocItemComponent } from './doc-item/doc-item.component';
+import { AudioItemComponent } from './audio-item/audio-item.component';
 
 // router configuration = navigation
 // depth ist für die routing animations
@@ -21,6 +22,11 @@ const appRoutes: Routes = [
   { path: 'watch', children: [
       { path: 'video', component: WatchComponent, data: { depth: 2 }, children: [
           { path: 'item/:title', component: VideoItemComponent }
+        ]}
+    ]},
+  { path: 'listen', children: [
+      { path: 'audio', component: HearComponent, data: { depth: 3 }, children: [
+          { path: 'item/:title', component: AudioItemComponent }
         ]}
     ]},
   { path: 'read', children: [
@@ -47,7 +53,8 @@ const appRoutes: Routes = [
     HomeComponent,
     UserComponent,
     VideoItemComponent,
-    DocItemComponent
+    DocItemComponent,
+    AudioItemComponent
   ],
   imports: [
     BrowserModule,
