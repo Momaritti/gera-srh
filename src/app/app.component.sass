@@ -6,6 +6,19 @@
   > *
     display: block
 
+// Gradient Function
+/// Mixin printing a linear-gradient
+/// as well as a plain color fallback
+/// and the `-webkit-` prefixed declaration
+/// @access public
+/// @param {Keyword | Angle} $direction - Linear gradient direction
+/// @param {Arglist} $color-stops - List of color-stops composing the gradient
+@mixin linear-gradient($direction, $color-stops...)
+  background: nth(nth($color-stops, 1), 1)
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops)
+  background: linear-gradient($direction, $color-stops)
+
+
 *
   padding: 0px
   margin: 0px
@@ -23,3 +36,32 @@
   position: fixed
   bottom: 0
   right: 0
+
+*
+  padding: 0px
+  margin: 0px
+
+h1
+  font-size: $h1-size
+  color: $font-color
+  font-family: $main-font
+  text-align: right
+  padding-right: 15%
+  padding-top: 5%
+  padding-bottom: 2%
+
+h2
+  font-size: $h2-size
+  font-family: $main-font
+  color: $font-color
+h3
+  font-size: $h3-size
+  color: $font-color
+  font-family: $main-font
+p
+  font-family: $main-font
+  font-size: $main-text
+  color: $font-color
+
+li
+  list-style-type: none
