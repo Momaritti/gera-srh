@@ -1,10 +1,18 @@
 <!-- router navigation -->
 <ul class="navigation">
-  <li><a routerLink="/home">Home</a></li>
-  <li><a routerLink="/read/document">Texte</a></li>
-  <li><a routerLink="/listen/audio">Audio</a></li>
-  <li><a routerLink="/watch/video">Videos</a></li>
-  <li><a routerLink="/user/list">Benutzer</a></li>
+  <li class="menu-icon-home"><a routerLink="/home">
+     <img class="srh-logo" src="../assets/srh.png" alt="">
+  </a></li>
+  <li class="menu-icon-document"><a routerLink="/read/document">
+    <img src="../assets/icons/article.svg" alt="">
+  </a></li>
+  <li class="menu-icon-audio"><a routerLink="/listen/audio">
+     <img src="../assets/icons/ear.svg" alt="">
+  </a></li>
+  <li class="menu-icon-video"><a routerLink="/watch/video">
+     <img src="../assets/icons/eyes.svg" alt="">
+  </a></li>
+  <li class="menu-icon-user"><a routerLink="/user/list">Benutzer</a></li>
 </ul>
 
 <div id="page" class="routeContainer" [@routeAnimation]="getDepth(myOutlet)">

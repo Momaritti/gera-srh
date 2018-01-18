@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WatchComponent implements OnInit {
 videos = [
-    { title: 'The bird', path: '../../assets/bird.mp4' },
+    { title: 'Der Specht', path: '../../assets/bird.mp4' },
   ];
   constructor() { }
 
