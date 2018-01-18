@@ -10,11 +10,14 @@ export class UserComponent implements OnInit {
   name: any;
   alter: any;
   sub: any;
-   constructor(private route: ActivatedRoute) { }
+
+  constructor(private route: ActivatedRoute) {
+  }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
       this.name = params['name'];
       this.alter = params['alter'];
     });
+  }
 }
