@@ -14,7 +14,10 @@
   background: nth(nth($color-stops, 1), 1)
   background: -webkit-linear-gradient(legacy-direction($direction), $color-stops)
   background: linear-gradient($direction, $color-stops)
-
+@mixin shadow($intensity)
+  -webkit-box-shadow: -32px -4px 80px 15px rgba(0,0,0, $intensity)
+  -moz-box-shadow: -32px -4px 80px 15px rgba(0,0,0, $intensity)
+  box-shadow: -32px -4px 80px 15px rgba(0,0,0, $intensity)
 
 *
   padding: 0px
@@ -73,6 +76,9 @@ li
 .navigation
   background-color: $background-color
   border-radius: 100%
+  -webkit-box-shadow: -32px -4px 80px 15px rgba(0,0,0,0.45)
+  -moz-box-shadow: -32px -4px 80px 15px rgba(0,0,0,0.45)
+  box-shadow: -32px -4px 80px 15px rgba(0,0,0,0.45)
   padding: 3rem
   padding-right: 0
   width: 50vw
@@ -102,6 +108,8 @@ li
   .menu-icon-audio, .menu-icon-document, .menu-icon-video, .menu-icon-home, .menu-icon-user
     position: fixed
     display: block
+    // a img &:hover
+      color: $background-color
   .menu-icon-document
     bottom: 30vw
   .menu-icon-audio
