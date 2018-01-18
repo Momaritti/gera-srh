@@ -7,9 +7,6 @@
     display: block
 
 // Gradient Function
-/// Mixin printing a linear-gradient
-/// as well as a plain color fallback
-/// and the `-webkit-` prefixed declaration
 /// @access public
 /// @param {Keyword | Angle} $direction - Linear gradient direction
 /// @param {Arglist} $color-stops - List of color-stops composing the gradient
@@ -72,6 +69,7 @@ p
 li
   list-style-type: none
 
+// circle navigation
 .navigation
   background-color: $background-color
   border-radius: 100%
@@ -99,6 +97,8 @@ li
         height: auto
       &:hover
         color: $font-color
+
+  // icons
   .menu-icon-audio, .menu-icon-document, .menu-icon-video, .menu-icon-home, .menu-icon-user
     position: fixed
     display: block
@@ -117,5 +117,18 @@ li
     right: 25vw
     bottom: 1rem
 
+  // outer window z.b. user list
+.container li
+  margin: 5%
+  border-radius: 1rem
+  background-color: rgba(226, 126, 180, .1)
+  transition: background-color .2s
+  &:hover
+    background-color: rgba(226, 126, 180, .2)
+  h2
+    padding: 1rem
+
+
+  // inner window z.b. user details
 .window
   border-radius: 1rem

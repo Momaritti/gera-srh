@@ -17,6 +17,4 @@ export class UserComponent implements OnInit {
       this.name = params['name'];
       this.alter = params['alter'];
     });
-  }
-
 }
