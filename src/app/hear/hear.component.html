@@ -1,6 +1,12 @@
-<div class="first-view">
-<h2>Hörbücher/Hörspiele</h2>
-<h3>Thema 1</h3>
-<h3>Thema 2</h3>
-<h3>Thema 3 </h3>
+
+<div class="container">
+  <div class="listen-view">
+    <h1>Hörspiele und Hörbücher</h1>
+    <ul>
+      <li *ngFor="let audio of audios" [routerLink]="['item', audio.title]">
+        <h2>{{audio.title}}</h2>
+      </li>
+    </ul>
+    <router-outlet></router-outlet>
+  </div>
 </div>

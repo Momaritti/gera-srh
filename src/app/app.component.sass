@@ -1,5 +1,44 @@
 @import "variables"
 
+.routeContainer
+  position: relative
+.routeContainer
+  > *
+    display: block
+
+// Gradient Function
+/// @access public
+/// @param {Keyword | Angle} $direction - Linear gradient direction
+/// @param {Arglist} $color-stops - List of color-stops composing the gradient
+@mixin linear-gradient($direction, $color-stops...)
+  background: nth(nth($color-stops, 1), 1)
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops)
+  background: linear-gradient($direction, $color-stops)
+@mixin shadow($intensity)
+  -webkit-box-shadow: -32px -4px 80px 15px rgba(0,0,0, $intensity)
+  -moz-box-shadow: -32px -4px 80px 15px rgba(0,0,0, $intensity)
+  box-shadow: -32px -4px 80px 15px rgba(0,0,0, $intensity)
+
+*
+  padding: 0px
+  margin: 0px
+body
+  margin: 0
+
+.first-view
+  height: 100vh
+  p
+    width: 45%
+    text-align: right
+    float: right
+    padding-right: 15%
+.navigation
+  z-index: 1
+  display: block
+  position: fixed
+  bottom: 0
+  right: 0
+
 *
   padding: 0px
   margin: 0px
@@ -17,34 +56,90 @@ h2
   font-size: $h2-size
   font-family: $main-font
   color: $font-color
-
 h3
   font-size: $h3-size
   color: $font-color
   font-family: $main-font
-
+h4
+  font-size: $h4-size
+  color: $font-color
+  font-family: $main-font
 p
   font-family: $main-font
   font-size: $main-text
   color: $font-color
 
-
 li
   list-style-type: none
 
+<<<<<<< HEAD
 div
   background: linear-gradient(-45deg, #F48F09, #CF4FE0)
+=======
+// circle navigation
+.navigation
+  background-color: $background-color
+  border-radius: 100%
+  -webkit-box-shadow: -32px -4px 80px 15px rgba(0,0,0,0.45)
+  -moz-box-shadow: -32px -4px 80px 15px rgba(0,0,0,0.45)
+  box-shadow: -32px -4px 80px 15px rgba(0,0,0,0.45)
+  padding: 3rem
+  padding-right: 0
+  width: 50vw
+  height: 50vw
+  right: -30vw
+  bottom: -30vw
+  li
+    // position: absolute
+    display: block
+    margin-right: -10em
+    a
+      text-decoration: none
+      font-size: 1.5rem
+      font-family: $main-font
+      text-align: right
+      margin-bottom: 1em
+      margin-left: 6vw
+      img
+        width: 7rem
+        height: 7rem
+      .srh-logo
+        height: auto
+      &:hover
+        color: $font-color
+>>>>>>> fcb93c0c6dafbb0752665ec998b4afe8d368123e
 
+  // icons
+  .menu-icon-audio, .menu-icon-document, .menu-icon-video, .menu-icon-home, .menu-icon-user
+    position: fixed
+    display: block
+    // a img &:hover
+      color: $background-color
+  .menu-icon-document
+    bottom: 30vw
+  .menu-icon-audio
+    bottom: 20vw
+    right: 35vw
+  .menu-icon-video
+    right: 45vw
+    bottom: 5vw
+  .menu-icon-home
+    right: 25vw
+    bottom: 5vw
+  .menu-icon-user
+    right: 25vw
+    bottom: 1rem
 
-.first-view
-  height: 100vh
-  p
-    width: 45%
-    text-align: right
-    float: right
-    padding-right: 15%
-
-
+  // outer window z.b. user list
+.container li
+  margin: 5%
+  border-radius: 1rem
+  background-color: rgba(226, 126, 180, .1)
+  transition: background-color .2s
+  &:hover
+    background-color: rgba(226, 126, 180, .2)
+  h2
+    padding: 1rem
 
 img
   height: 150px
@@ -53,3 +148,6 @@ img
 
 
 
+  // inner window z.b. user details
+.window
+  border-radius: 1rem

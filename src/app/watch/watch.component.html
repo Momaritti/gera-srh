@@ -1,7 +1,11 @@
-<div class="first-view">
-<h2>Filme</h2>
-<h3>Abenteuer</h3>
-<h3>Komödie</h3>
-<h3>Drama</h3>
-<h3>Romantik</h3>
+<div class="container">
+  <div class="watch-view">
+    <h1>Videos</h1>
+    <ul>
+      <li *ngFor="let video of videos" [routerLink]="['item', video.title]">
+        <h2>{{video.title}}</h2>
+      </li>
+    </ul>
+    <router-outlet></router-outlet>
+  </div>
 </div>
