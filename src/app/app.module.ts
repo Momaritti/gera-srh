@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {HttpModule, JsonpModule} from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HearComponent } from './hear/hear.component';
@@ -14,10 +15,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { VideoItemComponent } from './video-item/video-item.component';
 import { DocItemComponent } from './doc-item/doc-item.component';
 import { AudioItemComponent } from './audio-item/audio-item.component';
-
-import { AnimalTestComponent } from './animal-test/animal-test.component';
-import { JsonService } from './services/json.service';
+ import { AnimalTestComponent } from './animal-test/animal-test.component';
+// import { JsonService } from './services/json.service';
 import { TestComponent } from './test/test.component';
+
 // router configuration = navigation
 // depth ist für die routing animations
 const appRoutes: Routes = [
@@ -65,14 +66,15 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes),
-    JsonpModule
+    // JsonpModule
   ],
   providers: [
-    JsonService
+    // JsonService
     // PouchDBService
     ],
   bootstrap: [AppComponent]

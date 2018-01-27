@@ -1,11 +1,38 @@
+import { Injectable} from '@angular/core';
+import { URLSearchParams} from '@angular/http';
+import {Http} from '@angular/http';
+import { AnimalTestComponent } from '../animal-test/animal-test.component';
+
+@Injectable()
+export class JsonService {
+
+  data;
+
+  //constructor(private http: Http) { }
+
+  constructor(private http:Http) {
+    this.http.get('http://localhost:3000/items')
+      .subscribe(res => this.data = res.json());
+  }
+  getItems (item: string, location: string) {
+    this.http.get('http://localhost:3000/items');
+      // .subscribe(res => this.data = res.json());
+    // .subscribe(res => this.data = res.json());
+     return this.data;
+  }
+
+}
+
+/*
 import { Injectable } from '@angular/core';
-import { Jsonp, URLSearchParams } from '@angular/http';
+// import { Jsonp, URLSearchParams } from '@angular/http';
 import { AnimalTestComponent } from '../animal-test/animal-test.component';
 import 'rxjs/add/operator/map';
 
 @Injectable()
 export class JsonService {
   constructor(private jsonp: Jsonp) { }
+
   private dbUrl = 'http://localhost:3000/items';
 
   getItems(item : string,  location: string) {
@@ -25,4 +52,4 @@ export class JsonService {
       .map(response => <AnimalTestComponent[]> response.json().items.item);
   }
 }
-
+*/
