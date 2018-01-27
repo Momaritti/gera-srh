@@ -24,6 +24,7 @@
     "core-js": "^2.4.1",
     "express": "^4.16.2",
     "express-pouchdb": "^2.3.7",
+    "json-server": "^0.12.1",
     "node-sass": "^4.7.2",
     "pouchdb": "^6.4.1",
     "pouchdb-browser": "^6.3.4",
