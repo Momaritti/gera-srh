@@ -15,10 +15,12 @@ export class JsonService {
       .subscribe(res => this.data = res.json());
   }
   getItems (item: string, location: string) {
-    this.http.get('http://localhost:3000/items');
-      // .subscribe(res => this.data = res.json());
-    // .subscribe(res => this.data = res.json());
-     return this.data;
+    this.http.get('http://localhost:3000/items').subscribe(
+      data => {
+        console.log(data);
+        return this.data;
+      }
+    );
   }
 
 }

@@ -39,7 +39,6 @@ export class TestComponent {
     );
   }
 }
-
 /*
 export class TestComponent implements OnInit {
   items: Observable<AnimalTestComponent[]>;
