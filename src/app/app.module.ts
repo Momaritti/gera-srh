@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import {HttpModule, JsonpModule} from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HearComponent } from './hear/hear.component';
@@ -14,10 +15,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { VideoItemComponent } from './video-item/video-item.component';
 import { DocItemComponent } from './doc-item/doc-item.component';
 import { AudioItemComponent } from './audio-item/audio-item.component';
+ import { AnimalTestComponent } from './animal-test/animal-test.component';
+// import { JsonService } from './services/json.service';
+import { TestComponent } from './test/test.component';
 
 // router configuration = navigation
 // depth ist für die routing animations
 const appRoutes: Routes = [
+  { path: 'test', component: TestComponent},
   { path: 'home', component: HomeComponent, data: { title: 'home', depth: 1 }},
   { path: 'watch', children: [
       { path: 'video', component: WatchComponent, data: { depth: 2 }, children: [
@@ -40,7 +45,8 @@ const appRoutes: Routes = [
         ]}
     ]},
   { path: '', redirectTo: '/home', pathMatch: 'full', data: { title: 'start', depth: 0 }},
-  { path: '**', redirectTo: '/home', pathMatch: 'full' }
+  { path: '**', redirectTo: '/home', pathMatch: 'full' },
+  // { path: 'test', component: AnimalTestComponent, data: { title: 'test', depth: 1 }}
 ];
 
 @NgModule({
@@ -54,16 +60,21 @@ const appRoutes: Routes = [
     UserComponent,
     VideoItemComponent,
     DocItemComponent,
-    AudioItemComponent
+    AudioItemComponent,
+    AnimalTestComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    // JsonpModule
   ],
   providers: [
+    // JsonService
     // PouchDBService
     ],
   bootstrap: [AppComponent]

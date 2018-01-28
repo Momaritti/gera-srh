@@ -1,61 +1,7 @@
-<<<<<<< HEAD
+<ul>
+  <li *ngFor="let h of results">{{h.title}}</li>
+</ul>
 
-<div class="first-view">
-  <h1>
-    Hallo {{ user }}
-  </h1>
-<p>
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-  sed diam nonumy eirmod tempor invidunt ut labore et dolore
-  magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-  duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-  sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-  consetetur sadipscing elitr,
-</p>
-  <nav>
-    <ul>
-      <li><img src="../assets/img/article.svg"></li>
-      <li><img src="../assets/img/ear.svg"></li>
-      <li><img src="../assets/img/eyes.svg"></li>
-    </ul>
-  </nav>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <div class="menu-logo">s
-
-  </div>
-
-=======
-<div>
-  <input type="text" placeholder="Username" [(ngModel)]="form.username" />
-  <input type="text" placeholder="First Name" [(ngModel)]="form.firstname" />
-  <input type="text" placeholder="Last Name" [(ngModel)]="form.lastname" />
-  <button (click)="insert()">Add</button>
-  <br />
-  <table class="table table-striped">
-    <thead>
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let person of people">
-      <td>{{ person.firstname }}</td>
-      <td>{{ person.lastname }}</td>
-    </tr>
-    </tbody>
-  </table>
-</div>
->>>>>>> 4692ef6f0808d6fe2ee059a2650dba1503a13288
-=======
->>>>>>> 2aae30981990bb089f09fb8a88484a4c7bb53712
-</div>
-
-<app-hear></app-hear>
-<app-watch></app-watch>
-<app-read></app-read>
-=======
 <!-- router navigation -->
 <ul class="navigation">
   <li class="menu-icon-home"><a routerLink="/home">
@@ -70,10 +16,11 @@
   <li class="menu-icon-video"><a routerLink="/watch/video">
      <img src="../assets/icons/eyes.svg" alt="">
   </a></li>
+  <!--
   <li class="menu-icon-user"><a routerLink="/user/list">Benutzer</a></li>
+  -->
 </ul>
 
 <div id="page" class="routeContainer" [@routeAnimation]="getDepth(myOutlet)">
   <router-outlet #myOutlet="outlet"></router-outlet>
 </div>
->>>>>>> fcb93c0c6dafbb0752665ec998b4afe8d368123e
