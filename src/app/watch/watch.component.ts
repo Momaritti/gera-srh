@@ -8,9 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class WatchComponent implements OnInit {
   results;
-videos = [
-    { title: 'Der Specht', path: '../../assets/bird.mp4' },
-  ];
+
   constructor (private http: HttpClient) { }
 
   ngOnInit(): void {

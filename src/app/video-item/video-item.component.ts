@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
+import {JsonService} from '../services/json.service';
 
 @Component({
   selector: 'app-video-item',
@@ -7,17 +8,17 @@ import { ActivatedRoute} from '@angular/router';
   styleUrls: ['./video-item.component.sass']
 })
 export class VideoItemComponent implements OnInit {
+  // title;
   title: any;
   path: any;
-  sub: any;
-   constructor(private route: ActivatedRoute) { }
+  // sub: any;
 
+  // constructor(private route: ActivatedRoute) { }
+  constructor(private jsonService: JsonService) { }
   ngOnInit() {
-    this.sub = this.route.params.subscribe(params => {
-      this.title = params['title'];
-      this.path = params['path'];
-    });
-    this.path = '../../assets/bird.mp4'; // hardcoded for now
+    this.jsonService.cast.subscribe(title => this.title = title);
+    this.jsonService.cast2.subscribe(path => this.path = path);
+
   }
 
 }
