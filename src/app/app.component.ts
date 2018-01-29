@@ -1,8 +1,9 @@
 import { Http } from '@angular/http';
-import { HttpClient } from '@angular/common/http';
+// import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, NgZone } from '@angular/core';
 // import { RouterModule, Routes } from '@angular/router';
 import { trigger, transition, group, query, style, animate } from '@angular/animations';
+// import {Input, Input} from '@angular/compiler/src/core';
 
 @Component({
   selector: 'app-root',
@@ -67,24 +68,28 @@ import { trigger, transition, group, query, style, animate } from '@angular/anim
     ])
   ]
 })
-export class AppComponent implements OnInit {
-  data;
-  results = '';
+export class AppComponent {
+  // data;
+  // results;
+  // results: any[] = this.results;
   // tiefenerkennung für router animations
   getDepth(outlet) {
     return outlet.activatedRouteData['depth'];
   }
-  constructor(private http: HttpClient) {}
+
+  // constructor(private http: HttpClient) {
+  // }
+
   // public ngOnInit() {}
-  ngOnInit(): void {
+  /*ngOnInit(): void {
     this.http.get('http://localhost:3000/items').subscribe(
       data => {
-        console.log(data);
-        this.results = data;
+        // console.log(data);
+         this.results = data;
       }
     );
-  }
+  }*/
+  // @Input() name: string;
   public insert() {
   }
-
 }

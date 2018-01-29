@@ -2,7 +2,7 @@
   <div class="watch-view">
     <h1>Videos</h1>
     <ul>
-      <li *ngFor="let video of videos" [routerLink]="['item', video.title]">
+      <li *ngFor="let video of results" [routerLink]="['item', video.title]">
         <h2>{{video.title}}</h2>
       </li>
     </ul>

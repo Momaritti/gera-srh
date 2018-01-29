@@ -17,12 +17,12 @@ import { DocItemComponent } from './doc-item/doc-item.component';
 import { AudioItemComponent } from './audio-item/audio-item.component';
  import { AnimalTestComponent } from './animal-test/animal-test.component';
 // import { JsonService } from './services/json.service';
-import { TestComponent } from './test/test.component';
+// import { TestComponent } from './test/test.component';
 
 // router configuration = navigation
 // depth ist für die routing animations
 const appRoutes: Routes = [
-  { path: 'test', component: TestComponent},
+  // { path: 'test', component: TestComponent},
   { path: 'home', component: HomeComponent, data: { title: 'home', depth: 1 }},
   { path: 'watch', children: [
       { path: 'video', component: WatchComponent, data: { depth: 2 }, children: [
@@ -62,7 +62,7 @@ const appRoutes: Routes = [
     DocItemComponent,
     AudioItemComponent,
     AnimalTestComponent,
-    TestComponent
+    // TestComponent
   ],
   imports: [
     BrowserModule,
@@ -79,4 +79,4 @@ const appRoutes: Routes = [
     ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-read',
@@ -6,14 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./read.component.sass']
 })
 export class ReadComponent implements OnInit {
-docs = [
-    { title: 'Infos zum SRH WKKH Gera', text: 'Lorem Ipsum.' },
-    { title: 'Allgemeines zu Diabetes', text: 'Broteinheiten sind bla bla bla..' },
-    { title: 'Das menschliche Nervensystem', text: 'Lorem Ipsum.' },
-  ];
-  constructor() { }
-
-  ngOnInit() {
+  results;
+  constructor(private http: HttpClient) { }
+  ngOnInit(): void {
+    this.http.get('http://localhost:3000/document').subscribe(
+      data => {
+        this.results = data;
+      }
+    );
   }
 
 }
