@@ -15,7 +15,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { VideoItemComponent } from './video-item/video-item.component';
 import { DocItemComponent } from './doc-item/doc-item.component';
 import { AudioItemComponent } from './audio-item/audio-item.component';
-import { AnimalTestComponent } from './animal-test/animal-test.component';
 import { JsonService } from './services/json.service';
 // import { TestComponent } from './test/test.component';
 
@@ -61,7 +60,6 @@ const appRoutes: Routes = [
     VideoItemComponent,
     DocItemComponent,
     AudioItemComponent,
-    AnimalTestComponent,
     // TestComponent
   ],
   imports: [
