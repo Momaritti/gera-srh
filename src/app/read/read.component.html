@@ -9,7 +9,7 @@
   <div class="read-view">
     <h1>Lesen</h1>
     <ul>
-      <li *ngFor="let doc of docs" [routerLink]="['item', doc.title]">
+      <li *ngFor="let doc of results" [routerLink]="['item', doc.title]">
         <h2>{{doc.title}}</h2>
       </li>
     </ul>

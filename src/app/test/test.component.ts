@@ -4,8 +4,6 @@ import { HttpClient } from '@angular/common/http';
 import { JsonService } from '../services/json.service';
 import { Observable } from 'rxjs/Observable';
 
-import { AnimalTestComponent } from '../animal-test/animal-test.component';
-
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',
