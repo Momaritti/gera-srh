@@ -34,7 +34,7 @@ const appRoutes: Routes = [
         ]}
     ]},
   { path: 'read', children: [
-      { path: 'document', component: ReadComponent, data: { depth: 2 }, children: [
+      { path: 'document', component: ReadComponent, data: { depth: 4 }, children: [
           { path: 'item/:title', component: DocItemComponent }
         ]}
     ]},
