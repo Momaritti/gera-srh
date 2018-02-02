@@ -6,7 +6,7 @@
     { "id": 4, "title": "das ist ein test", "path": "../pdc.mp3" }
   ],
   "audio": [
-    { "id": 1, "title": "Podcast: Das Herz und unser Blut", "path": "../../assets/herz.mp3", "cover": "../../assets/cover/herz.jpg" },
+    { "id": 1, "title": "Podcast: Das Herz und unser Blut", "path": "../../assets/herz.mp3", "cover": "../../assets/cover/cover.jpg" },
     { "id": 2, "title": "Die Spur des Spielers", "path": "../../assets/Die Spur des Spieler.mp3" },
     { "id": 3, "title": "Fragezeichen und die Schwarze Madonna", "path": "../../assets/Fragezeichen und die Schwarze Madonna.mp3" },
     { "id": 4, "title": "Fragezeichen und Die Villa der Toten", "path": "../../assets/Fragezeichen und Die Villa der Toten Folge 114.mp3" },
@@ -22,5 +22,11 @@
   "comments": [
     { "id": 1, "body": "some comment", "postId": 1 }
   ],
-  "profile": { "name": "derboy" }
+  "userdb": [
+    { "id": 1, "name": "Anna", "age": 8, "station": "Kinderstation" },
+    { "id": 2, "name": "Ibrahim", "age": 12, "station": "Kinderstation" },
+    { "id": 3, "name": "Ahmed", "age": 9, "station": "Kinderstation" },
+    { "id": 4, "name": "Bobby", "age": 10, "station": "Kinderstation" },
+    { "id": 5, "name": "Heidrun", "age": 53, "station": "Kinderstation Eltern" }
+  ]
 }
