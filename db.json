@@ -20,7 +20,7 @@
     { "id": 3, "title": "Dein Vogel", "path": "../../assets/bird.mp4", "description": "Video Beschreibung für 3" }
   ],
   "user": [
-    { "id": 1, "name": "Anna", "age": 8, "station": "Kinderstation", "text": "Schädigung im Halsmarkbereich, die zu einer Lähmung führt, welche sowohl die Arme als auch die Beine betrifft. Gewöhnlich bei Th1 oder darüber."},
+    { "id": 1, "name": "Anna", "age": 8, "station": "Kinderstation", "text": "Vor dir siehst du ein Tablet mit verschieden Inhalten, die du hier entdecken kannst. Einige klären dich über deine Rückenschmerzen auf und wie du damit umgehen kannst andere sind einfach nur da um die den Aufenthalt im Krankenhaus so gut wie möglich zu machen."},
     { "id": 2, "name": "Ibrahim", "age": 12, "station": "Kinderstation" },
     { "id": 3, "name": "Ahmed", "age": 9, "station": "Kinderstation" },
     { "id": 4, "name": "Bobby", "age": 10, "station": "Kinderstation" },
