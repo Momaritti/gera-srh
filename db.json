@@ -15,12 +15,12 @@
     { "id": 7, "title": "TKKG  - TIMS GEFÄHRLICHSTER GEGNER", "path": "../../assets/TKKG  - TIMS GEFÄHRLICHSTER GEGNER HÖRSPIEL KOMPLETT.mp3" }
   ],
   "video": [
-    { "id": 1, "title": "Der Specht", "path": "../../assets/bird.mp4", "description": "Video Beschreibung für 1" },
-    { "id": 2, "title": "Der Buntspecht", "path": "../../assets/birdo.mp4", "description": "Video Beschreibung für 2. Hier stimmt der Pfad absichtlich nicht.." },
+    { "id": 1, "title": "Der Buntspecht", "path": "../../assets/bird.mp4", "description": "Video Beschreibung für 1" },
+    { "id": 2, "title": "Ameisenkolonie", "path": "../../assets/ant.mp4", "description": "Ameisen sind eine Familie der Insekten innerhalb der Ordnung der Hautflügler. Derzeit sind mehr als 13.000 Arten beschrieben, davon etwa 200 in Europa. Die ältesten fossilen Funde stammen aus der Kreidezeit und werden auf ein Alter von 100 Millionen Jahren datiert. Das Alter der Gruppe wird jedoch auf möglicherweise 130 Millionen Jahre geschätzt." },
     { "id": 3, "title": "Dein Vogel", "path": "../../assets/bird.mp4", "description": "Video Beschreibung für 3" }
   ],
   "user": [
-    { "id": 1, "name": "Anna", "age": 8, "station": "Kinderstation", "text": "Vor dir siehst du ein Tablet mit verschieden Inhalten, die du hier entdecken kannst. Einige klären dich über deine Rückenschmerzen auf und wie du damit umgehen kannst andere sind einfach nur da um die den Aufenthalt im Krankenhaus so gut wie möglich zu machen."},
+    { "id": 1, "name": "Anna", "age": 8, "station": "Kinderstation", "text": "Hier kannst du verschiedene Inhalte entdecken.     Einige klären dich über deine Rückenschmerzen auf, andere sind einfach nur da um die den Aufenthalt im Krankenhaus so gut wie möglich zu machen. Um zu beginnen: Klicke auf eins der Symbole im Menu unten rechts."},
     { "id": 2, "name": "Ibrahim", "age": 12, "station": "Kinderstation" },
     { "id": 3, "name": "Ahmed", "age": 9, "station": "Kinderstation" },
     { "id": 4, "name": "Bobby", "age": 10, "station": "Kinderstation" },
