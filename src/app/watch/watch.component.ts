@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-watch',
@@ -8,9 +9,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class WatchComponent implements OnInit {
   results;
-
-  constructor (private http: HttpClient) { }
-
+  id: any; // um id der child component über den router mit zu geben
+  constructor (private http: HttpClient,
+               private router: Router) {}
   ngOnInit(): void {
     this.http.get('http://localhost:3000/video').subscribe(
       data => {
@@ -18,5 +19,7 @@ export class WatchComponent implements OnInit {
       }
     );
   }
-
+  onSelect ( video ) {
+    this.router.navigate(['/video', video.id]);
+  }
 }

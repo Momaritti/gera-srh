@@ -3,12 +3,13 @@
     <h1>Videos</h1>
     <div class="box-container">
     <ul>
-      <li *ngFor="let video of results" [routerLink]="['item', video.title]">
+      <li (click)="onSelect(video)" *ngFor="let video of results" [routerLink]="['item', video.id]">
         <h2>{{video.title}}</h2>
+        <h3>{{video.id}}</h3>
       </li>
     </ul>
     </div>
     <router-outlet></router-outlet>
-    <!-- <app-video-item></app-video-item> -->
+    <!--<app-video-item></app-video-item>-->
   </div>
 </div>

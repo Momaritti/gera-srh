@@ -1,11 +1,15 @@
 <div class="container">
-  <a class="backbutton" routerLink="/listen/audio"><h2>X</h2></a>
-  <div class="audio-item-view window">
+  <div class="audio-item-view window" *ngIf="results">
+    <a class="backbutton" routerLink="/audio"><h2>X</h2></a>
+    <h2>{{results.title}}</h2>
+    <p>{{results.description}}</p>
     <audio controls>
       <!--source src="herz.ogg" type="audio/ogg">-->
-      <h2>{{title}}</h2>
-      <source src="{{path}}" type="audio/mp3">
+      <source src="{{results.path}}" type="audio/mp3">
       Your browser does not support the audio element.
     </audio>
   </div>
 </div>
+<!--
+<app-watch></app-watch>
+-->

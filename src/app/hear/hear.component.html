@@ -4,10 +4,15 @@
     <h1>Hörspiele und Hörbücher</h1>
     <div class="box-container">
     <ul>
-
+      <li (click)="onSelect(audio)" *ngFor="let audio of results" [routerLink]="['item', audio.id]">
+        <h2>{{audio.title}}</h2>
+        <h3>{{audio.id}}</h3>
+      </li>
+      <!--
       <li *ngFor="let audio of results" [routerLink]="['item', audio.title]">
         <h2>{{audio.title}}</h2>
       </li>
+      -->
     </ul>
     </div>
     <router-outlet></router-outlet>

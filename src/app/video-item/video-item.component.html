@@ -1,12 +1,17 @@
+<!-- Du hast Item {{itemId}} ausgewählt !!-->
 <div class="container">
-  <div class="video-item-view window">
-    <a class="backbutton" routerLink="/watch/video"><h2>X</h2></a>
-    <h2>{{title}}</h2>
-    <h1>{{test}}</h1>
+  <div class="video-item-view window" *ngIf="results">
+     <a class="backbutton" routerLink="/video"><h2>X</h2></a>
+    <h2>{{results.title}}</h2>
+    <p>{{results.description}}</p>
     <video width="100%" height="auto" controls>
-      <source src="{{path}}" type="video/mp4">
+      <source src="{{results.path}}" type="video/mp4">
       <!--<source src="movie.ogg" type="video/ogg">-->
       Your browser does not support the video tag.
     </video>
   </div>
 </div>
+
+<!--
+<app-watch></app-watch>
+-->
