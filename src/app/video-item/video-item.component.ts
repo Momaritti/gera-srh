@@ -12,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
 export class VideoItemComponent implements OnInit {
   results;
   public itemId;
-  constructor ( private route: ActivatedRoute, private http: HttpClient){}
+  constructor ( private route: ActivatedRoute, private http: HttpClient) {}
   ngOnInit() {
     let id = this.route.snapshot.params['id'];
     this.itemId = id;

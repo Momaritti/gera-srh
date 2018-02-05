@@ -3,6 +3,7 @@
   <div class="video-item-view window" *ngIf="results">
      <a class="backbutton" routerLink="/video"><h2>X</h2></a>
     <h2>{{results.title}}</h2>
+    <p>{{results.description}}</p>
     <video width="100%" height="auto" controls>
       <source src="{{results.path}}" type="video/mp4">
       <!--<source src="movie.ogg" type="video/ogg">-->

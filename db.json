@@ -15,9 +15,9 @@
     { "id": 7, "title": "TKKG  - TIMS GEFÄHRLICHSTER GEGNER", "path": "../../assets/TKKG  - TIMS GEFÄHRLICHSTER GEGNER HÖRSPIEL KOMPLETT.mp3" }
   ],
   "video": [
-    { "id": 1, "title": "Der Specht", "path": "../../assets/bird.mp4" },
-    { "id": 2, "title": "Der Buntspecht", "path": "../../assets/birdo.mp4" },
-    { "id": 3, "title": "Dein Vogel", "path": "../../assets/bird.mp4" }
+    { "id": 1, "title": "Der Specht", "path": "../../assets/bird.mp4", "description": "Video Beschreibung für 1" },
+    { "id": 2, "title": "Der Buntspecht", "path": "../../assets/birdo.mp4", "description": "Video Beschreibung für 2. Hier stimmt der Pfad absichtlich nicht.." },
+    { "id": 3, "title": "Dein Vogel", "path": "../../assets/bird.mp4", "description": "Video Beschreibung für 3" }
   ],
   "comments": [
     { "id": 1, "body": "some comment", "postId": 1 }
