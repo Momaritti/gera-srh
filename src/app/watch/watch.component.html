@@ -1,12 +1,14 @@
 <div class="container">
   <div class="watch-view">
     <h1>Videos</h1>
+    <div class="box-container">
     <ul>
       <li (click)="onSelect(video)" *ngFor="let video of results" [routerLink]="['item', video.id]">
         <h2>{{video.title}}</h2>
         <h3>{{video.id}}</h3>
       </li>
     </ul>
+    </div>
     <router-outlet></router-outlet>
     <!--<app-video-item></app-video-item>-->
   </div>

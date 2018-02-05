@@ -8,6 +8,7 @@
 <div class="container">
   <div class="read-view">
     <h1>Lesen</h1>
+    <div class="box-container">
     <ul>
       <li (click)="onSelect( text )" *ngFor="let text of results" [routerLink]="['item', text.id]">
         <h2>{{text.title}}</h2>
@@ -19,6 +20,7 @@
       </li>
       -->
     </ul>
+    </div>
     <router-outlet></router-outlet>
   </div>
 </div>
