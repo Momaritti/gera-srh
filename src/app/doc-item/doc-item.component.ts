@@ -1,24 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
-
+import { HttpClient } from '@angular/common/http';
 @Component({
-  selector: 'app-doc-item',
+  // selector: 'app-doc-item',
   templateUrl: './doc-item.component.html',
   styleUrls: ['./doc-item.component.sass']
 })
 export class DocItemComponent implements OnInit {
-  title: any;
-  text: any;
-  sub: any;
-
-  constructor(private route: ActivatedRoute) { }
+  results;
+  public itemId;
+  constructor(private route: ActivatedRoute,
+              private  http: HttpClient ) {}
 
   ngOnInit() {
-    this.sub = this.route.params.subscribe(params => {
-      this.title = params['title'];
-      this.text = params['text'];
-    });
-    this.text = 'Lorem Ipsum Dolorem sin amnet...'; // hardcoded for now
+    let id = this.route.snapshot.params['id'];
+    this.itemId = id;
+    this.http.get('http://localhost:3000/document/' + id ).subscribe(
+      data => {
+        this.results = data;
+      }
+    );
   }
-
 }

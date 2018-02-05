@@ -18,7 +18,6 @@ export class VideoItemComponent implements OnInit {
     this.itemId = id;
     this.http.get('http://localhost:3000/video/' + id ).subscribe(
       data => {
-        // this.results = data;
         this.results = data;
       }
     );

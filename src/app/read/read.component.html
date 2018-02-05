@@ -9,9 +9,15 @@
   <div class="read-view">
     <h1>Lesen</h1>
     <ul>
+      <li (click)="onSelect( text )" *ngFor="let text of results" [routerLink]="['item', text.id]">
+        <h2>{{text.title}}</h2>
+        <h3>{{text.id}}</h3>
+      </li>
+      <!--
       <li *ngFor="let doc of results" [routerLink]="['item', doc.title]">
         <h2>{{doc.title}}</h2>
       </li>
+      -->
     </ul>
     <router-outlet></router-outlet>
   </div>

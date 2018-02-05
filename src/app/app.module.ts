@@ -30,18 +30,25 @@ const appRoutes: Routes = [
         ]}
     ]},
     */
-   { path: 'video', component: WatchComponent},
-  { path: 'video/:id', component: VideoItemComponent},
+  { path: 'video', component: WatchComponent, data: {depth: 3}},
+  { path: 'video/:id', component: VideoItemComponent },
+  { path: 'audio', component: HearComponent, data: {depth: 2}},
+  { path: 'audio/:id', component: AudioItemComponent },
+  /*
   { path: 'listen', children: [
       { path: 'audio', component: HearComponent, data: { depth: 3 }, children: [
           { path: 'watch/video/item/:title', component: AudioItemComponent }
         ]}
-    ]},
+    ]},*/
+  { path: 'text', component: ReadComponent, data: {depth: 4}},
+  { path: 'text/:id', component: DocItemComponent },
+  /*
   { path: 'read', children: [
       { path: 'document', component: ReadComponent, data: { depth: 4 }, children: [
           { path: 'item/:title', component: DocItemComponent }
         ]}
     ]},
+    */
   { path: 'user', children: [
       { path: 'list', component: UserListComponent, data: { depth: 3 }, children: [
           { path: 'detail/:name', component: UserComponent }
