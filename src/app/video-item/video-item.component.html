@@ -1,11 +1,10 @@
-works {{itemId}}!!
-<h2> Du hast {{itemId}} ausgewählt! </h2>
+<!-- Du hast Item {{itemId}} ausgewählt !!-->
 <div class="container">
-  <div class="video-item-view window" *ngIf="item">
+  <div class="video-item-view window" *ngIf="results">
      <a class="backbutton" routerLink="/video"><h2>X</h2></a>
-    <h2>{{item.title}}</h2>
+    <h2>{{results.title}}</h2>
     <video width="100%" height="auto" controls>
-      <source src="{{item.path}}" type="video/mp4">
+      <source src="{{results.path}}" type="video/mp4">
       <!--<source src="movie.ogg" type="video/ogg">-->
       Your browser does not support the video tag.
     </video>

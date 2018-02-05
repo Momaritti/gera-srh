@@ -9,13 +9,19 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './video-item.component.html',
   styleUrls: ['./video-item.component.sass']
 })
-export class VideoItemComponent implements OnInit{
+export class VideoItemComponent implements OnInit {
+  results;
   public itemId;
   constructor ( private route: ActivatedRoute, private http: HttpClient){}
   ngOnInit() {
     let id = this.route.snapshot.params['id'];
     this.itemId = id;
-
+    this.http.get('http://localhost:3000/video/' + id ).subscribe(
+      data => {
+        // this.results = data;
+        this.results = data;
+      }
+    );
   }
 }
 
