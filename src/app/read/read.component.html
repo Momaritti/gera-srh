@@ -8,11 +8,13 @@
 <div class="container">
   <div class="read-view">
     <h1>Lesen</h1>
+    <div class="box-container">
     <ul>
       <li *ngFor="let doc of results" [routerLink]="['item', doc.title]">
         <h2>{{doc.title}}</h2>
       </li>
     </ul>
+    </div>
     <router-outlet></router-outlet>
   </div>
 </div>

@@ -10,10 +10,7 @@
 /// @access public
 /// @param {Keyword | Angle} $direction - Linear gradient direction
 /// @param {Arglist} $color-stops - List of color-stops composing the gradient
-@mixin linear-gradient($direction, $color-stops...)
-  background: nth(nth($color-stops, 1), 1)
-  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops)
-  background: linear-gradient($direction, $color-stops)
+
 @mixin shadow($intensity)
   -webkit-box-shadow: -32px -4px 80px 15px rgba(0,0,0, $intensity)
   -moz-box-shadow: -32px -4px 80px 15px rgba(0,0,0, $intensity)
@@ -133,10 +130,10 @@ li
 .container
   overflow-y: hidden
 .container li
-  margin: 5%
-  border-radius: 1rem
-  background-color: rgba(226, 126, 180, .1)
+  margin: 2%
+  background-color: #FFFFFF
   transition: background-color .2s
+
   &:hover
     background-color: rgba(226, 126, 180, .2)
   h2

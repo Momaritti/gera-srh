@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+//colors
+$white: #fff
+$color_burnt_sienna_approx: #ee7752
+$color_cerise_approx: #e73c7e
+$color_curious_blue_approx: #23a6d5
+$color_shamrock_approx: #23d5ab
+
+//fonts
+$font_0: Open Sans
+
+body
+  width: 100vh
+  height: 90vh
+  color: $white
+  background: linear-gradient(-45deg, $color_burnt_sienna_approx, $color_cerise_approx, $color_curious_blue_approx, $color_shamrock_approx)
+  background-size: 400% 400%
+  animation: Gradient 15s ease infinite
+
+@-webkit-keyframes Gradient
+  0%
+    background-position: 0 50%
+
+  50%
+    background-position: 100% 50%
+
+  100%
+    background-position: 0 50%
+
+
+@-moz-keyframes Gradient
+  0%
+    background-position: 0 50%
+
+  50%
+    background-position: 100% 50%
+
+  100%
+    background-position: 0 50%
+
+
+@keyframes Gradient
+  0%
+    background-position: 0 50%
+
+  50%
+    background-position: 100% 50%
+
+  100%
+    background-position: 0 50%
+
+
+.box-container
+  white-space: nowrap
+  overflow: auto
+  ul
+    width: 300%
