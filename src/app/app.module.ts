@@ -23,14 +23,18 @@ import { JsonService } from './services/json.service';
 const appRoutes: Routes = [
   // { path: 'test', component: TestComponent},
   { path: 'home', component: HomeComponent, data: { title: 'home', depth: 1 }},
+  /*
   { path: 'watch', children: [
       { path: 'video', component: WatchComponent, data: { depth: 2 }, children: [
           { path: 'item/:title', component: VideoItemComponent }
         ]}
     ]},
+    */
+   { path: 'video', component: WatchComponent},
+  { path: 'video/:id', component: VideoItemComponent},
   { path: 'listen', children: [
       { path: 'audio', component: HearComponent, data: { depth: 3 }, children: [
-          { path: 'item/:title', component: AudioItemComponent }
+          { path: 'watch/video/item/:title', component: AudioItemComponent }
         ]}
     ]},
   { path: 'read', children: [
@@ -74,3 +78,4 @@ const appRoutes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule {}
+export const routingComponents = [VideoItemComponent, WatchComponent];

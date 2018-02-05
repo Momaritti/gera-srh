@@ -2,8 +2,10 @@
   <div class="watch-view">
     <h1>Videos</h1>
     <ul>
-      <li *ngFor="let video of results" [routerLink]="['item', video.title]">
+      <li (click)="onSelect(video)" *ngFor="let video of results" [routerLink]="['item', video.id]">
+          <!--[queryParams]="{id:1}"> -->
         <h2>{{video.title}}</h2>
+        <h3>{{video.id}}</h3>
 <!--        <h3>{{video.path}}</h3> kommt auch an -->
       </li>
     </ul>

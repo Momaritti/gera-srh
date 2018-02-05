@@ -1,6 +1,8 @@
+works {{itemId}}!!
+<h2> Du hast {{itemId}} ausgewählt! </h2>
 <div class="container">
   <div class="video-item-view window" *ngIf="item">
-     <a class="backbutton" routerLink="/watch/video"><h2>X</h2></a>
+     <a class="backbutton" routerLink="/video"><h2>X</h2></a>
     <h2>{{item.title}}</h2>
     <video width="100%" height="auto" controls>
       <source src="{{item.path}}" type="video/mp4">
@@ -9,3 +11,4 @@
     </video>
   </div>
 </div>
+<!--<app-watch></app-watch>-->

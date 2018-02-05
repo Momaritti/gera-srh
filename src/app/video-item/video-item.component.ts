@@ -1,35 +1,47 @@
 import { Component, OnInit } from '@angular/core';
-// import { ActivatedRoute} from '@angular/router';
-// import {JsonService} from '../services/json.service';
+import { ActivatedRoute } from '@angular/router';
 
 import { HttpClient } from '@angular/common/http';
+// import { URLSearchParams } from '@angular/http';
 
 @Component({
-  selector: 'app-video-item',
+  // selector: 'app-video-item' // braucht man gar nich ?,
   templateUrl: './video-item.component.html',
   styleUrls: ['./video-item.component.sass']
 })
+export class VideoItemComponent implements OnInit{
+  public itemId;
+  constructor ( private route: ActivatedRoute, private http: HttpClient){}
+  ngOnInit() {
+    let id = this.route.snapshot.params['id'];
+    this.itemId = id;
+
+  }
+}
+
+/*
 export class VideoItemComponent implements OnInit {
+  public ItemId;
   // results;
   item;
-
+  id: string;
   // title: any;
   // path: any;
   // sub: any;
   // item = data[0];
-  constructor (private http: HttpClient ) {}
-  // constructor(private route: ActivatedRoute) { }
-  // constructor(private jsonService: JsonService) { }
-  ngOnInit(): void {
-    // TODO change id
+  constructor(private route: ActivatedRoute, private http: HttpClient) {}
+  ngOnInit() {
     this.http.get('http://localhost:3000/video').subscribe(
       data => {
         // this.results = data;
-        this.item = data[0];
+        this.item = data[this.id];
       }
     );
+    let id = this.route.snapshot.params['id'];
+    this.ItemId = id;
     // this.jsonService.cast.subscribe(title => this.title = title);
     // this.jsonService.cast2.subscribe(path => this.path = path);
   }
 
 }
+*/
