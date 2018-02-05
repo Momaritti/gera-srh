@@ -19,11 +19,8 @@
     { "id": 2, "title": "Der Buntspecht", "path": "../../assets/birdo.mp4", "description": "Video Beschreibung für 2. Hier stimmt der Pfad absichtlich nicht.." },
     { "id": 3, "title": "Dein Vogel", "path": "../../assets/bird.mp4", "description": "Video Beschreibung für 3" }
   ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "userdb": [
-    { "id": 1, "name": "Anna", "age": 8, "station": "Kinderstation" },
+  "user": [
+    { "id": 1, "name": "Anna", "age": 8, "station": "Kinderstation", "text": "Schädigung im Halsmarkbereich, die zu einer Lähmung führt, welche sowohl die Arme als auch die Beine betrifft. Gewöhnlich bei Th1 oder darüber."},
     { "id": 2, "name": "Ibrahim", "age": 12, "station": "Kinderstation" },
     { "id": 3, "name": "Ahmed", "age": 9, "station": "Kinderstation" },
     { "id": 4, "name": "Bobby", "age": 10, "station": "Kinderstation" },

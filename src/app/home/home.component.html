@@ -1,10 +1,11 @@
 <div class="container">
-  <div class="first-view">
+  <div class="first-view" *ngIf="results">
+      <h4 class="station-name"> {{ results.station }}</h4>
     <h1>
-      Hallo {{ user }}
+      Hallo {{ results.name }}
     </h1>
     <p>
-      Da die meisten Eltern kontrollieren wollen welche Medien ihre Kinder konsumieren bieten wir natürlich die Möglichkeit die Inhalte vorher einzusehen. Hier findet Ihr eine Auflistung der Inhalte sortiert nach Medienart. Ihr könnt dieses Vorgang natürlich auch überspringen.
+      {{ results.text }}
     </p>
     <nav>
       <ul>
