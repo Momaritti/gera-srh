@@ -4,6 +4,7 @@
     <ul>
       <li *ngFor="let video of results" [routerLink]="['item', video.title]">
         <h2>{{video.title}}</h2>
+<!--        <h3>{{video.path}}</h3> kommt auch an -->
       </li>
     </ul>
     <router-outlet></router-outlet>

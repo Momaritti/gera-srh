@@ -45,7 +45,6 @@ const appRoutes: Routes = [
     ]},
   { path: '', redirectTo: '/home', pathMatch: 'full', data: { title: 'start', depth: 0 }},
   { path: '**', redirectTo: '/home', pathMatch: 'full' },
-  // { path: 'test', component: AnimalTestComponent, data: { title: 'test', depth: 1 }}
 ];
 
 @NgModule({
@@ -60,7 +59,6 @@ const appRoutes: Routes = [
     VideoItemComponent,
     DocItemComponent,
     AudioItemComponent,
-    // TestComponent
   ],
   imports: [
     BrowserModule,
@@ -69,11 +67,9 @@ const appRoutes: Routes = [
     HttpModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes),
-    // JsonpModule
   ],
   providers: [
     JsonService
-    // PouchDBService
     ],
   bootstrap: [AppComponent]
 })

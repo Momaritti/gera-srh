@@ -1,0 +1,18 @@
+{
+  "items": [
+    { "id": 1, "title": "Podcast: Das Herz und unser Blut", "path": "../../assets/herz.mp3" },
+    { "id": 2, "title": "nochn podcast", "path": "../pdc.mp3" }
+  ],
+  "test": [
+    { "id": 1, "title": "Podcast: Das Herz und unser Blut", "path": "../../assets/herz.mp3" },
+    { "id": 2, "title": "nochn podcast", "path": "../pdc.mp3" }
+  ],
+  "audios": [
+    { "id": 1, "title": "Podcast: Das Herz und unser Blut", "path": "../../assets/herz.mp3" },
+    { "id": 2, "title": "nochn podcast", "path": "../pdc.mp3" }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}
