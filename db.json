@@ -13,12 +13,14 @@
     { "id": 4, "title": "Fragezeichen und Die Villa der Toten", "path": "../../assets/Fragezeichen und Die Villa der Toten Folge 114.mp3" },
     { "id": 5, "title": "Im Kaufhaus ist der Teufel los", "path": "../../assets/Im Kaufhaus ist der Teufel los (1).mp3" },
     { "id": 6, "title": "TKKG  - Klassenfahrt zur Hexenburg", "path": "../../assets/TKKG  - Klassenfahrt zur Hexenburg.mp3" },
-    { "id": 7, "title": "TKKG  - TIMS GEFÄHRLICHSTER GEGNER", "path": "../../assets/TKKG  - TIMS GEFÄHRLICHSTER GEGNER HÖRSPIEL KOMPLETT.mp3" }
+    { "id": 7, "title": "TKKG  - Tims gefährlichster Gegner", "path": "../../assets/TKKG  - TIMS GEFÄHRLICHSTER GEGNER HÖRSPIEL KOMPLETT.mp3" }
   ],
   "video": [
     { "id": 1, "title": "Der Buntspecht", "path": "../../assets/bird.mp4", "description": "Video Beschreibung für 1" },
     { "id": 2, "title": "Ameisenkolonie", "path": "../../assets/ant.mp4", "description": "Ameisen sind eine Familie der Insekten innerhalb der Ordnung der Hautflügler. Derzeit sind mehr als 13.000 Arten beschrieben, davon etwa 200 in Europa. Die ältesten fossilen Funde stammen aus der Kreidezeit und werden auf ein Alter von 100 Millionen Jahren datiert. Das Alter der Gruppe wird jedoch auf möglicherweise 130 Millionen Jahre geschätzt." },
-    { "id": 3, "title": "Dein Vogel", "path": "../../assets/bird.mp4", "description": "Video Beschreibung für 3" }
+    { "id": 3, "title": "Dein Vogel", "path": "../../assets/bird.mp4", "description": "Video Beschreibung für 3" },
+    { "id": 4, "title": "Deine Rückenmuskeln", "path": "../../assets/rückenmuskulatur.mp4", "description": "in diesem Video lernst du spannende Infos über die Rückenmuskulatur" },
+    { "id": 5, "title": "Dein Rücken", "path": "../../assets/anatomiedesmenschen.mp4", "description": "Hier erfährst du mehr das Wunder Rücken" }
   ],
   "user": [
     { "id": 1, "name": "Anna", "age": 8, "station": "Kinderstation", "text": "Hier kannst du verschiedene Inhalte entdecken.     Einige klären dich über deine Rückenschmerzen auf, andere sind einfach nur da um die den Aufenthalt im Krankenhaus so gut wie möglich zu machen. Um zu beginnen: Klicke auf eins der Symbole im Menu unten rechts."},
