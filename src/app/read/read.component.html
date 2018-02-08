@@ -1,10 +1,3 @@
-<!--
-<div class="first-view">
-<h2>Lesen</h2>
-<h3>Zu deiner Krankheit</h3>
-<h3>Verwandte Themen</h3>
-</div>
--->
 <div class="container">
   <div class="read-view">
     <h1>Lesen</h1>
@@ -13,11 +6,6 @@
       <li (click)="onSelect( text )" *ngFor="let text of results" [routerLink]="['item', text.id]">
         <h2 class="text-title">{{text.title}}</h2>
       </li>
-      <!--
-      <li *ngFor="let doc of results" [routerLink]="['item', doc.title]">
-        <h2>{{doc.title}}</h2>
-      </li>
-      -->
     </ul>
     </div>
     <router-outlet></router-outlet>

@@ -1,9 +1,9 @@
 [
-    { "id": 1, "title": "Podcast: Das Herz und unser Blut", "path": "../../assets/herz.mp3", "cover": "../../assets/cover/cover.jpg" },
-    { "id": 2, "title": "Die Spur des Spielers", "path": "../../assets/Die Spur des Spieler.mp3" },
-    { "id": 3, "title": "Fragezeichen und die Schwarze Madonna", "path": "../../assets/Fragezeichen und die Schwarze Madonna.mp3" },
-    { "id": 4, "title": "Fragezeichen und Die Villa der Toten", "path": "../../assets/Fragezeichen und Die Villa der Toten Folge 114.mp3" },
-    { "id": 5, "title": "Im Kaufhaus ist der Teufel los", "path": "../../assets/Im Kaufhaus ist der Teufel los (1).mp3" },
-    { "id": 6, "title": "TKKG  - Klassenfahrt zur Hexenburg", "path": "../../assets/TKKG  - Klassenfahrt zur Hexenburg.mp3" },
-    { "id": 7, "title": "TKKG  - TIMS GEFÄHRLICHSTER GEGNER", "path": "../../assets/TKKG  - TIMS GEFÄHRLICHSTER GEGNER HÖRSPIEL KOMPLETT.mp3" }
+    { "id": 0, "title": "Podcast: Das Herz und unser Blut", "path": "../../assets/herz.mp3", "cover": "../../assets/cover/cover.jpg" },
+    { "id": 1, "title": "Die Spur des Spielers", "path": "../../assets/Die Spur des Spieler.mp3" },
+    { "id": 2, "title": "Fragezeichen und die Schwarze Madonna", "path": "../../assets/Fragezeichen und die Schwarze Madonna.mp3" },
+    { "id": 3, "title": "Fragezeichen und Die Villa der Toten", "path": "../../assets/Fragezeichen und Die Villa der Toten Folge 114.mp3" },
+    { "id": 4, "title": "Im Kaufhaus ist der Teufel los", "path": "../../assets/Im Kaufhaus ist der Teufel los (1).mp3" },
+    { "id": 5, "title": "TKKG  - Klassenfahrt zur Hexenburg", "path": "../../assets/TKKG  - Klassenfahrt zur Hexenburg.mp3" },
+    { "id": 6, "title": "TKKG  - TIMS GEFÄHRLICHSTER GEGNER", "path": "../../assets/TKKG  - TIMS GEFÄHRLICHSTER GEGNER HÖRSPIEL KOMPLETT.mp3" }
 ]
