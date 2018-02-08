@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./doc-item.component.sass']
 })
 export class DocItemComponent implements OnInit {
+  public apiHost = './assets/data/document.json';
   results;
   public itemId;
   constructor(private route: ActivatedRoute,
@@ -15,10 +16,13 @@ export class DocItemComponent implements OnInit {
   ngOnInit() {
     let id = this.route.snapshot.params['id'];
     this.itemId = id;
-    this.http.get('http://localhost:3000/document/' + id ).subscribe(
-      data => {
+    this.http.get(this.apiHost).subscribe(
+      /*data => {
         this.results = data;
-      }
+      }*/
+    data => {
+      this.results = data[id];
+    }
     );
   }
 }

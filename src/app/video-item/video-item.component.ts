@@ -10,17 +10,20 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./video-item.component.sass']
 })
 export class VideoItemComponent implements OnInit {
+  public apiHost = './assets/data/video.json';
   results;
   public itemId;
   constructor ( private route: ActivatedRoute, private http: HttpClient) {}
   ngOnInit() {
     let id = this.route.snapshot.params['id'];
     this.itemId = id;
-    this.http.get('http://localhost:3000/video/' + id ).subscribe(
-      data => {
+    this.http.get(this.apiHost).subscribe(
+      /*data => {
         this.results = data;
-      }
-    );
+      }*/
+      data => {
+      this.results = data[id];
+    });
   }
 }
 

@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./audio-item.component.sass']
 })
 export class AudioItemComponent implements OnInit {
+  public apiHost = './assets/data/audio.json';
   results;
   public itemId;
   constructor( private route: ActivatedRoute,
@@ -14,9 +15,9 @@ export class AudioItemComponent implements OnInit {
   ngOnInit() {
     let id = this.route.snapshot.params['id'];
     this.itemId = id;
-    this.http.get('http://localhost:3000/audio/' + id ).subscribe(
+    this.http.get(this.apiHost).subscribe(
       data => {
-        this.results = data;
+        this.results = data[id];
       }
     );
   }

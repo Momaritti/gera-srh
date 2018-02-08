@@ -8,6 +8,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   // user = 'Anna';
+  public apiHost = './assets/data/user.json';
   results;
   public userId;
   constructor( private route: ActivatedRoute,
@@ -15,7 +16,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     let id = 1; // this.route.snapshot.params['id'];
     this.userId = id;
-    this.http.get('http://localhost:3000/user/' + id ).subscribe(
+    this.http.get(this.apiHost).subscribe(
       data => {
         this.results = data;
       }
