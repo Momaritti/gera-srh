@@ -7,12 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./read.component.sass']
 })
 export class ReadComponent implements OnInit {
+  public apiHost = './assets/data/document.json';
   results;
   id: any;
   constructor(private http: HttpClient,
               private router: Router ) { }
   ngOnInit(): void {
-    this.http.get('http://localhost:3000/document').subscribe(
+    this.http.get(this.apiHost).subscribe(
       data => {
         this.results = data;
       }
