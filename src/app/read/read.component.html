@@ -11,9 +11,11 @@
     <div class="box-container">
     <ul>
       <li (click)="onSelect( text )" *ngFor="let text of results" [routerLink]="['item', text.id]">
-
+        <div class="article-styles">
         <h2>{{text.title}}</h2>
+        </div>
         <h3>{{text.id}}</h3>
+        <div class="ribbon"></div>
       </li>
 
       <!--
