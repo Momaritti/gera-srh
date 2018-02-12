@@ -5,7 +5,7 @@
     <ul>
       <li (click)="onSelect(video)" *ngFor="let video of results" [routerLink]="['item', video.id]">
         <h2>{{video.title}}</h2>
-        <h3>{{video.id}}</h3>
+        <img class="film-logo" src="{{video.cover}}">
       </li>
     </ul>
     </div>

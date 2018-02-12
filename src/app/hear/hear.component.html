@@ -5,8 +5,14 @@
     <div class="box-container">
     <ul>
       <li (click)="onSelect(audio)" *ngFor="let audio of results" [routerLink]="['item', audio.id]">
+        <div class="cd-cover">
         <h2>{{audio.title}}</h2>
-        <h3>{{audio.id}}</h3>
+        </div>
+
+        <img class="title-logo" src="{{audio.cover}}">
+        <div class="cd-1"></div>
+        <div class="cd-2"></div>
+        <div class="cd-3"></div>
       </li>
       <!--
       <li *ngFor="let audio of results" [routerLink]="['item', audio.title]">
