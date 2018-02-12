@@ -7,16 +7,10 @@
         <div class="article-styles">
         <h2>{{text.title}}</h2>
         </div>
-        <h3>{{text.id}}</h3>
         <div class="ribbon"></div>
       </li>
 
-
-      <li *ngFor="let doc of results" [routerLink]="['item', doc.title]">
-        <h2>{{doc.title}}</h2>
-
-      </li>
-    </ul>
+      </ul>
     </div>
     <router-outlet></router-outlet>
   </div>
