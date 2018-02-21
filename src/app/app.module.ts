@@ -15,7 +15,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { VideoItemComponent } from './video-item/video-item.component';
 import { DocItemComponent } from './doc-item/doc-item.component';
 import { AudioItemComponent } from './audio-item/audio-item.component';
-import { JsonService } from './services/json.service';
 
 // router configuration = navigation
     // depth ist für die routing animations
@@ -27,7 +26,7 @@ const appRoutes: Routes = [
     { path: 'audio/:id', component: AudioItemComponent },
     { path: 'text', component: ReadComponent, data: {depth: 4}},
     { path: 'text/:id', component: DocItemComponent },
-    // { path: '', redirectTo: '/home', pathMatch: 'full', data: { title: 'start', depth: 0 }},
+    { path: 'home', redirectTo: '', pathMatch: 'full', data: { title: 'start', depth: 0 }},
     { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
@@ -37,7 +36,7 @@ const appRoutes: Routes = [
     HearComponent,
     WatchComponent,
     ReadComponent,
-      //UserListComponent,
+      // UserListComponent,
     HomeComponent,
       // UserComponent,
     VideoItemComponent,
@@ -52,10 +51,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [
-    JsonService
-    ],
-  bootstrap: [AppComponent]
+    bootstrap: [AppComponent]
 })
 export class AppModule {}
 export const routingComponents = [VideoItemComponent, WatchComponent];
