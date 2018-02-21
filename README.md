@@ -2,8 +2,11 @@
 
 Edutainment platform for kids in hospital
 
-## Development 
+## Development
 
 Run `npm install`
 
-Run `ng serve` 
+Run `ng serve`
+
+Navigate your Chrome or Chromium Browser to `http://localhost:4200`
+
