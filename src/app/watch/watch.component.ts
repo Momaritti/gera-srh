@@ -14,7 +14,7 @@ export class WatchComponent implements OnInit {
   constructor (private http: HttpClient,
                private router: Router) {}
   ngOnInit(): void {
-      //    this.http.get('http://localhost:3000/video').subscribe(
+      //    this.http.get('http://localhost:3000/video').subscribe(  // so für json server
           this.http.get(this.apiHost).subscribe(
       data => {
         this.results = data;
